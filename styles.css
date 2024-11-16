@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: rgb(123, 105, 89);
+    padding: 0;
+    margin: 0;
+
+    scroll-behavior: smooth;
+}
+
+/* js particle effect */
+
+#particle {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: -50% -50%;
+
+    box-shadow: 0 0 1rem black;
+
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* main */
+
+body {
+    background-color: hsl(0, 0%, 5%);
+}
+
+/* navigation */
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    
+    width: fit-content;
+    margin: auto;
+    border-radius: 1rem;
+
+    padding: 1rem;
+    background-color: rgba(25, 25, 25, 0.5);
+    backdrop-filter: blur(10px);
+
+    position: sticky;
+    top: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+/* main heading and information */
+
+#self-info {
+    text-align: center;
+}
+
+#hero-text {
+    font-size: 6rem;
+
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+
+    background-image: linear-gradient(to right, rgb(255, 100, 100) 0%, rgb(255, 255, 100) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+/* skills */
+
+#skills-container {
+    height: 6rem;
+    margin: 4rem;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    border-block: 3px solid hsl(30, 9%, 9%);
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    border-radius: 1rem;
+    border: 3px solid hsl(30, 9%, 9%);
+
+    img {
+        height: 100%;
+    }
+}
+
+/* new sections */
+
+.section-header {
+    text-align: center;
+    margin: 3rem;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+/* projects */
+
+#projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    padding-inline: 10rem;
+}
+
+.project {
+    padding: 2rem;
+    background-color: hsl(30, 9%, 9%);
+
+    img {
+        width: 100%;
+        aspect-ratio: calc(16 / 9);
+    }
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-block: 0.5rem;
+}
+
+.project-description {
+    padding-block: 0.5rem;
+}
