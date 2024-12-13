@@ -1,26 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+	--accent: rgb(123, 105, 89);
+}
+
 * {
 	box-sizing: border-box;
 	font-family: Poppins;
-	color: rgb(123, 105, 89);
+	color: var(--accent);
 	padding: 0;
 	margin: 0;
 
 	scroll-behavior: smooth;
+	user-select: none;
 }
 
-/* js particle effect */
-
-canvas {
-	position: fixed;
-	left: 0;
-	top: 0;
-
-	opacity: 0.5;
-
-	z-index: 999;
-	pointer-events: none;
+svg {
+	aspect-ratio: 1;
 }
 
 /* main */
@@ -46,6 +42,8 @@ body {
 
 	position: sticky;
 	top: 1rem;
+
+	z-index: 99;
 
 	a {
 		text-decoration: none;
@@ -108,7 +106,7 @@ body {
 	border-radius: 1rem;
 	border: 3px solid hsl(30, 9%, 9%);
 
-	img {
+	svg {
 		height: 100%;
 	}
 }
@@ -126,7 +124,7 @@ body {
 
 #projects-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
 
 	padding-inline: 10rem;
@@ -136,19 +134,105 @@ body {
 	padding: 2rem;
 	background-color: hsl(30, 9%, 9%);
 
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
 	img {
 		width: 100%;
 		aspect-ratio: calc(16 / 9);
+		object-fit: cover;
 	}
+}
+
+.project-link {
+	&:hover {
+		&::before {
+			content: "";
+
+			position: absolute;
+			width: 25px;
+			height: 25px;
+
+			margin: 0.5rem;
+
+			background-image: url(images/icons/external-link.png);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	transition: 200ms;
 }
 
 .project-title {
 	font-size: 1.3rem;
 	font-weight: 300;
 	text-transform: uppercase;
-	padding-block: 0.5rem;
 }
 
 .project-description {
-	padding-block: 0.5rem;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid;
+}
+
+.project-tools {
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 0.5rem;
+
+	p {
+		padding: 0.5rem 0.75rem;
+		border-radius: 10px;
+
+		background-color: hsl(0, 0%, 7%);
+	}
+}
+
+/* about */
+
+#about-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	padding: 2rem;
+	gap: 2rem;
+}
+
+/* footer */
+
+footer {
+	display: flex;
+
+	background-color: black;
+
+	padding: 5rem;
+	gap: 5rem;
+}
+
+.footer-section {
+	flex-grow: 1;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-header {
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid;
+	font-weight: bold;
+}
+
+#links-container {
+	display: flex;
+	gap: 1rem;
+
+	svg {
+		fill: var(--accent);
+		height: 50px;
+	}
 }
