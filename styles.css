@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+	scroll-behavior: smooth;
+
+	/* colors */
+
 	--accent: rgb(123, 105, 89);
+
+	/* values */
+
+	--grid-overflow: 300px;
 }
 
 * {
@@ -10,9 +18,6 @@
 	color: var(--accent);
 	padding: 0;
 	margin: 0;
-
-	scroll-behavior: smooth;
-	user-select: none;
 }
 
 svg {
@@ -42,6 +47,7 @@ body {
 
 	position: sticky;
 	top: 1rem;
+	bottom: 1rem;
 
 	z-index: 99;
 
@@ -70,9 +76,9 @@ body {
 }
 
 #hero-text {
-	font-size: 6rem;
+	font-size: 5rem;
 
-	margin-top: 5rem;
+	margin-top: 7rem;
 	margin-bottom: 1rem;
 
 	background-image: linear-gradient(to right, rgb(255, 100, 100) 0%, rgb(255, 255, 100) 100%);
@@ -84,7 +90,7 @@ body {
 
 #skills-container {
 	height: 8rem;
-	margin: 4rem;
+	margin: 8rem;
 	padding: 2rem;
 
 	display: flex;
@@ -115,7 +121,7 @@ body {
 
 .section-header {
 	text-align: center;
-	margin: 3rem;
+	padding: 5rem;
 	font-size: 3rem;
 	font-weight: 500;
 }
@@ -124,10 +130,10 @@ body {
 
 #projects-container {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-	padding-inline: 10rem;
+	padding-inline: 10%;
+	gap: 10%;
 }
 
 .project {
@@ -156,7 +162,7 @@ body {
 
 			margin: 0.5rem;
 
-			background-image: url(images/icons/external-link.png);
+			background-image: url(images/external-link.png);
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -195,16 +201,17 @@ body {
 
 #about-container {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-	padding: 2rem;
+	padding-inline: 2rem;
 	gap: 2rem;
 }
 
 /* footer */
 
 footer {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 
 	background-color: black;
 
@@ -213,7 +220,6 @@ footer {
 }
 
 .footer-section {
-	flex-grow: 1;
 	width: 100%;
 
 	display: flex;
