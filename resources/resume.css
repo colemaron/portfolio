@@ -1,0 +1,37 @@
+* {
+	box-sizing: border-box;
+
+	color: black;
+	text-decoration: none;
+}
+
+body {
+	background-color: rgb(240, 240, 240);
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+p {
+	margin-block: 1pt;
+}
+
+ul {
+	padding-left: 0;
+}
+
+#resume {
+	background-color: white;
+	font-family: Arial;
+
+	padding: 1in;
+	margin: 2rem auto;
+
+	width: 8.5in;
+	height: 11in;
+}
+
+header {
+	text-align: center;
+}

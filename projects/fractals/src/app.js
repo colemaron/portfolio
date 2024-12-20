@@ -185,6 +185,7 @@ document.addEventListener("keydown", event => {
 		render()
 	} else if (event.key == "h") {
 		info.classList.toggle("disabled");
+		box.classList.toggle("disabled");
 	}
 })
 
