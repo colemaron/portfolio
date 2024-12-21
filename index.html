@@ -8,7 +8,7 @@
 	<link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="styles.css">
 
-	<script src="app.js" defer></script>
+	<script src="src/app.js" defer></script>
 </head>
 <body>
 	<!-- main header and hero text -->
@@ -58,6 +58,7 @@
 	<h2 id="projects" class="section-header">Projects</h2>
 
 	<div id="projects-container">
+
 		<!-- fractal project -->
 
 		<div class="project">
@@ -74,21 +75,8 @@
 				<p>Custom Libraries</p>
 			</div>
 		</div>
-		
-		<div class="project">
-			<a target="_blank" class="project-link" href="projects\fractals\index.html">
-				<img src="projects/fractals/image.png" alt="fractal project">
-			</a>
 
-			<p class="project-title">Fractal Rendering</p>
-			<p class="project-description">Uses an iterative set of rules to efficiently render fractals and allows zooming to explore it</p>
-
-			<div class="project-tools">
-				<p>Multithreading</p>
-				<p>GPU Rendering</p>
-				<p>Custom Libraries</p>
-			</div>
-		</div>
+		<!-- fractal project -->
 
 		<div class="project">
 			<a target="_blank" class="project-link" href="projects\fractals\index.html">
@@ -112,11 +100,11 @@
 
 	<div id="about-container">
 		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, repellendus distinctio libero, odio eveniet delectus aliquid deleniti magni est dignissimos mollitia ipsa itaque. Exercitationem quaerat nemo asperiores deleniti quam unde tenetur eveniet qui cupiditate porro ullam ut corrupti, consequuntur facilis reprehenderit suscipit aut mollitia veniam inventore nam quibusdam velit maxime! Id doloremque dolore aliquid dolor necessitatibus inventore tempore neque eaque sunt placeat, saepe illo deleniti vero! Incidunt assumenda et ipsum, ex eligendi pariatur labore maiores magni architecto aut illum ipsam sunt reiciendis tenetur unde aliquam doloremque consequuntur dolorem! Nostrum, dignissimos laudantium enim officiis earum ab quaerat placeat exercitationem et porro.
+			I’m 16 and in high school, and spend a good amount of time working on coding projects at home. I enjoy building simulations, often experimenting with ideas like gravity and fluid dynamics. These projects give me the chance to break down complex systems and turn them into something functional and interesting.
 		</div>
 
 		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, repellendus distinctio libero, odio eveniet delectus aliquid deleniti magni est dignissimos mollitia ipsa itaque. Exercitationem quaerat nemo asperiores deleniti quam unde tenetur eveniet qui cupiditate porro ullam ut corrupti, consequuntur facilis reprehenderit suscipit aut mollitia veniam inventore nam quibusdam velit maxime! Id doloremque dolore aliquid dolor necessitatibus inventore tempore neque eaque sunt placeat, saepe illo deleniti vero! Incidunt assumenda et ipsum, ex eligendi pariatur labore maiores magni architecto aut illum ipsam sunt reiciendis tenetur unde aliquam doloremque consequuntur dolorem! Nostrum, dignissimos laudantium enim officiis earum ab quaerat placeat exercitationem et porro.
+			I pick up new concepts quickly and focus on following through with my work until it’s done. Whether it’s troubleshooting code or refining details, I value the process of improving and completing what I start.
 		</div>
 	</div>
 
@@ -125,30 +113,30 @@
 	<h2 id="contact" class="section-header">Contact</h2>
 
 	<div id="contact-container">
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, eius! Omnis, eaque officia! In sint consequatur nisi expedita soluta sapiente, animi voluptate dicta eius inventore eaque earum, quae veritatis recusandae?
-		</div>
+		<iframe id="location-map" width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=6997%20N%20Glen%20Harbor%20Blvd,%20Glendale,%20AZ%2085307+()&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 
 		<div id="contact-form">
 			<div class="input-section">
 				<label>First Name</label>
-				<input class="contact-input" placeholder="Enter first name" type="text">
+				<input id="first-name" class="contact-input" placeholder="Enter first name" type="text">
 			</div>
 
 			<div class="input-section">
 				<label>Last Name</label>
-				<input class="contact-input" placeholder="Enter last name" type="text">
+				<input id="last-name" class="contact-input" placeholder="Enter last name" type="text">
 			</div>
 
 			<div style="grid-column: 2 span;" class="input-section">
 				<label>Email</label>
-				<input class="contact-input" placeholder="Enter email address" type="text">
+				<input id="email" class="contact-input" placeholder="Enter email address" type="text">
 			</div>
 
 			<div style="grid-column: 2 span;" class="input-section">
 				<label>Body</label>
-				<textarea class="contact-input" placeholder="Enter message body"></textarea>
+				<textarea id="body" class="contact-input" placeholder="Enter message body"></textarea>
 			</div>
+
+			<button id="contact-submit" class="contact-input" type="submit">Submit</button>
 		</div>
 	</div>
 
@@ -157,7 +145,7 @@
 			<p class="footer-header">Contact</p>
 
 			<p>(623) 826-5953</p>
-			<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=colemaron@icloud.com">colemaron@icloud.com</a>
+			<p>colemaron@icloud.com</p>
 		</div>
 		
 		<div class="footer-section">

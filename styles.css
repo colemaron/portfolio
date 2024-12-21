@@ -91,7 +91,7 @@ body {
 	margin-block: 2rem;
 	margin-top: 4rem;
 
-	background-image: linear-gradient(to right, rgb(255, 100, 100) 0%, rgb(255, 255, 100) 100%);
+	background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-stop));
 	background-clip: text;
 	color: transparent;
 }
@@ -214,8 +214,8 @@ body {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
 
-	padding-inline: 4rem;
-	gap: 4rem;
+	padding-inline: 10vw;
+	gap: 6rem;
 }
 
 /* contact */
@@ -224,14 +224,14 @@ body {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
 
-	padding-inline: 5rem;
-	gap: 5rem;
+	padding-inline: 10vw;
+	gap: 6rem;
 }
 
 #contact-form {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 1rem;
+	gap: 2rem 1rem;
 }
 
 .input-section {
@@ -258,9 +258,21 @@ body {
 	padding: 1rem;
 
 	&:focus {
-		outline: 2px solid var(--accent);
+		outline: 2px solid white;
 		outline-offset: -2px;
 	}
+}
+
+#contact-submit {
+	color: black;
+	background-color: white;
+
+	grid-column: 2 span;
+}
+
+#location-map {
+	border-radius: 0.5rem;
+	min-height: 20rem;
 }
 
 /* footer */
